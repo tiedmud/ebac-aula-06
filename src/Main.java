@@ -1,15 +1,36 @@
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Boas-vindas!");
+        System.out.printf("Boas-vindas! ");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite seu nome: ");
+        String nome = scanner.nextLine();
+
+        System.out.print("Digite seu CPF: ");
+        String cpf = scanner.nextLine();
+
+        System.out.print("Digite seu peso: ");
+        float peso = scanner.nextFloat();
+
+        scanner.nextLine();
+
+        System.out.print("Digite sua altura: ");
+        float altura = scanner.nextFloat();
+
+        scanner.nextLine();
+
+        System.out.print("Digite seu estado civil: ");
+        String estadoCivil = scanner.nextLine();
+
+        scanner.close();
+
+        System.out.println("Olá, " + nome + "! Seu CPF é " + cpf + "! Seu peso é " + peso + "! Sua altura é " + altura + "! Seu estado civil é " + estadoCivil + "!");
     }
 }
